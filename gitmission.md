@@ -51,3 +51,30 @@
 - 删除远程分支
   - git push origin --delete [branch-name]
   - git branch -dr [remote-brach]
+
+## 标签
+- git tag 列出所有tag
+- git tag [tag] 新建一个tag 在当前commit
+- git tag -d [tag] 删除本地tag
+- git push origin :refs/tags/[tagName] 删除远程tag
+- git show [tag] 查看tag信息
+- git push [remote] [tag] 提交指定tag
+- git push [remote] --tags 提交所有tag
+- git checkout -b [branch] [tag] 新建一个分支，指向某个tag
+
+## 查看信息
+- git status 显示所有并更文件
+- git log 显示当前分支的版本历史
+- git log --stat 显示commit 历史， 以及每次commit 发生变更的文件
+- git log -S [keyword] 搜索提交历史，根据关键词
+- git log [tag] HEAD --pretty=format:%s   显示某个commit之后的所有变动，每个commit占据一行
+- git log [tag] HEAD --grep feature 显示某个commit 之后的所有变动，其’提交说明’必须符合搜索条件
+- git log --follow [file]     git whatchanged [file] 显示某个文件的版本历史，包括文件改名
+- git diff --shortstat "@{0 day ago}" 显示今天你写了多少行代码
+- git show [commit] 显示某次提交的元数据和内容变化
+- git reflog 显示当前分支的最近几次提交
+
+## 远程同步
+- git fetch [remote] 下载远程仓库的所有变动
+- git remote -v 显示所有远程仓库
+- git remote show [remote]  显示某个远程仓库的信息
