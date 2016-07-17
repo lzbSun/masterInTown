@@ -78,3 +78,17 @@
 - git fetch [remote] 下载远程仓库的所有变动
 - git remote -v 显示所有远程仓库
 - git remote show [remote]  显示某个远程仓库的信息
+- git remote add [shortname] [url] 增加一个新的远程仓库，并命名
+- git pull [remote] [branch] 取回远程仓库的变化，并与本地分支合并
+- git push [remote] [branch] 强行推送当前分支到远程分支， 即使有冲突
+- git push [remote] --all 推送所有分支到远程仓库
+
+## 撤销
+- git checkout [file] 恢复暂存区的指定文件到工作区
+- git checkout [commit] [file] 恢复某个commit 的指定文件到暂存区和工作区
+- git checkout . 恢复暂存区的所有文件到工作区
+- git reset [file] 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变
+- git reset --hard [commit] 重置当前分支的HEAD为指定commit ，同时重置暂存区和工作区，与指定commit一致
+- git reset --keep [commit] 重置当前HEAD 为指定commit , 但保持暂存区和工作区不变
+- git revert [commit] 新建一个commit ，用来撤销指定commit 后者的所有变化都将被前着抵消，并且应用到当前分支
+- git stash   git stash pop 暂时将未提交的变化移除，稍后再移入
