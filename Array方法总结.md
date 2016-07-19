@@ -21,7 +21,7 @@ splice() 方法用新元素替换旧元素，以此修改数组的内容。
    ```
 ## slice
 把数组中一部分的浅复制存入一个新数组对象中，并返回这个数组
-> array.slice([begin[, end]]) 
+> array.slice([begin[, end]])
 
 - begin
     从该索引处开始提取原数组中的元素（从0开始）
@@ -39,4 +39,3 @@ splice() 方法用新元素替换旧元素，以此修改数组的内容。
     var fruits = ['apple', 'orange', 'lemon', 'apple'];
     var citrus = fruits.slice(1, 3); [ 'orange', 'lemon']
 ```
-
